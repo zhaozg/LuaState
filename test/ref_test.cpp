@@ -16,16 +16,16 @@ int main(int argc, char** argv)
 
     lua::Ref ref = state["table"]["a"];
     lua::Ref tabRef = state["table"];
-    
+
     assert(ref.unref() == 'a');
     assert(tabRef.unref()["a"] == 'a');
-    
+
     lua::Ref copyRef = ref;
     assert(copyRef.unref() == 'a');
-    
+
     copyRef = tabRef;
     assert(copyRef.unref()["a"] == 'a');
-        
+
     state.checkMemLeaks();
     return 0;
 }

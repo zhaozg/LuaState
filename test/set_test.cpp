@@ -34,7 +34,7 @@ int main(int argc, char** argv)
     state.doString("assert(tab.a == nil)");
     state.doString("assert(tab.b == nil)");
     state.doString("assert(tab.c == nil)");
-    
+
     // Set values via lua::Value
     {
         lua::Value value = state["tab"];
@@ -45,7 +45,7 @@ int main(int argc, char** argv)
         state.doString("assert(tab[2] == 2)");
         state.doString("assert(tab[3] == 3)");
     }
-    
+
     state.checkMemLeaks();
     return 0;
 }

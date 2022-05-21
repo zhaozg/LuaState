@@ -43,6 +43,6 @@ int main(int argc, char** argv)
     runTest("state_test");
     runTest("types_test");
     runTest("values_test");
-    
+
     return 0;
 }
